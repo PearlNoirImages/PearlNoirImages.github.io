@@ -1,0 +1,205 @@
+/*!
+ * Bootstrap v2.3.2
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+
+// Core variables and mixins
+@import "../less/variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "../less/mixins.less";
+
+// CSS Reset
+@import "../less/reset.less";
+
+// Grid system and page structure
+@import "../less/scaffolding.less";
+@import "../less/grid.less";
+@import "../less/layouts.less";
+
+// Base CSS
+@import "../less/type.less";
+//@import "../less/code.less";
+@import "../less/forms.less";
+//@import "../less/tables.less";
+
+// Components: common
+//@import "../less/sprites.less";
+//@import "../less/dropdowns.less";
+//@import "../less/wells.less";
+//@import "../less/component-animations.less";
+//@import "../less/close.less";
+
+// Components: Buttons & Alerts
+@import "../less/buttons.less";
+//@import "../less/button-groups.less";
+//@import "../less/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+
+// Components: Nav
+@import "../less/navs.less";
+@import "../less/navbar.less";
+//@import "../less/breadcrumbs.less";
+//@import "../less/pagination.less";
+//@import "../less/pager.less";
+
+// Components: Popovers
+//@import "../less/modals.less";
+//@import "../less/tooltip.less";
+//@import "../less/popovers.less";
+
+// Components: Misc
+@import "../less/thumbnails.less";
+//@import "../less/media.less";
+//@import "../less/labels-badges.less";
+//@import "../less/progress-bars.less";
+//@import "../less/accordion.less";
+@import "../less/carousel.less";
+//@import "../less/hero-unit.less";
+
+
+// RESPONSIVE CLASSES
+// ------------------
+
+@import "../less/responsive-utilities.less";
+
+
+// MEDIA QUERIES
+// ------------------
+
+// Large desktops
+@import "../less/responsive-1200px-min.less";
+
+// Tablets to regular desktops
+@import "../less/responsive-768px-979px.less";
+
+// Phones to portrait tablets and narrow desktops
+@import "../less/responsive-767px-max.less";
+
+
+// RESPONSIVE NAVBAR
+// ------------------
+
+// From 979px and below, show a button to toggle navbar contents
+@import "../less/responsive-navbar.less";
+
+
+// Utility classes
+@import "../less/utilities.less"; // Has to be last to override when necessary
+
+
+/*	________________	Main Site CSS	________________	*/
+
+body {
+/*	background-image: url("/public/img/fishnet.png");	*/
+	padding: 20% 0px;
+//	background-color: #666;
+}
+
+h1 {
+	font-family: "Great Vibes", cursive;
+	font-size: 48px;
+}
+
+#logo {
+	position: absolute;
+	top: -10px;
+	left: 0px;
+	z-index: 1500;
+	img {
+		width: 345px;
+	}
+}
+
+
+#header {
+	position: relative;
+	font-variant: small-caps;
+	font-size: 18px;
+	.navbar-fixed-top {
+		top: 70px;
+	}
+	.navbar-inner {
+		background-image: none;
+		background-color: transparent;
+		box-shadow: none;
+		border: none;
+	}
+	
+	.active a {
+		background-color: transparent;
+		box-shadow: none;
+		font-weight: bold;
+		text-shadow: 0 1px 0 @navbarLinkColor;
+	}
+}
+
+.container {
+//	background-color: #EEE;
+	position: relative;
+}
+#content {
+	a {
+		display: block;
+		margin: 15px 0px;
+	}
+}
+
+#slideshow {
+	position: relative;
+	height: 300px;
+	overflow: hidden;
+	.carousel-inner img {
+		max-height: 1500px;
+	}
+	
+	.item {
+		min-height: 300px;
+		-webkit-transition: opacity 3s;
+		-moz-transition: opacity 3s;
+		-ms-transition: opacity 3s;
+		-o-transition: opacity 3s;
+		transition: opacity 3s;
+		&.white img {
+			height: 300px;
+			width: 100%;
+		}
+	}
+	.carousel .active.left, .carousel .active.right {
+		left: 0;
+		opacity: 0;
+		z-index: 2;
+	}
+	.carousel .next, .carousel .prev {
+		left: 0;
+		opacity: 1;
+		z-index: 1;
+	}
+}
+
+#foot {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: 0.5em;
+	text-align: center;
+	font-variant: small-caps;
+	div:first-child {
+		text-align: left;
+	}
+	div:last-child {
+		text-align: right;
+	}
+	a:focus,
+	a:active,
+	a:hover {
+		text-decoration: none;
+		font-weight: 700;
+	}
+}
+
+asdf
+{
+}

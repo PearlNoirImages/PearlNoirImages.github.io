@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% include head.html %}
+</head>
+
+<body>
+
+
+
+
+
+	<div class="container">
+		<div id="logo"><img alt="Pearl Noir Logo" src="public/img/pearlnoir-logo.png"></div>
+		<div class="row-fluid">
+			<div id="slideshow" class="span10 offset2">
+				{% include slideshow.html %}
+			</div>
+		</div>
+		<div class="row-fluid">
+			<div id="content" class="span10 offset1">
+<!-- 
+				{{ content }}
+ -->
+			</div>
+		</div>
+
+		<div id="foot" class="row-fluid">
+			<div class="span2 offset2">
+				<a href="https://www.flickr.com/photos/pearlnoirimages/">Flicker</a>
+			</div>
+			<div class="span6">
+				<a href="mailto:pearlnoirimages@gmail.com">PearlNoirImages@gmail.com</a>
+			</div>
+			<div class="span2">
+				<a href="http://www.facebook.com/PearlNoirImages">Facebook</a>
+			</div>
+		</div>
+
+
+	</div> <!-- /container -->
+
+	{% include js.html %}
+
+</body>
+</html>

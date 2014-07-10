@@ -1,0 +1,5 @@
+name:       Pearl Noir Images
+pygments:   false
+
+exclude:    ['*.less']
+baseurl:    /
