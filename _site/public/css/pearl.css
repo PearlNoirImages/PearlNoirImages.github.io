@@ -4161,7 +4161,14 @@ a.thumbnail:focus {
 body {
   /*	background-image: url("/public/img/fishnet.png");	*/
 
-  padding: 20% 0px;
+  background-color: #666;
+  padding: 0px;
+}
+#wrapper {
+  position: relative;
+  margin: 15% 0px;
+  background-color: #EEE;
+  box-shadow: 0px 5px 15px #333;
 }
 h1 {
   font-family: "Great Vibes", cursive;
@@ -4169,9 +4176,12 @@ h1 {
 }
 #logo {
   position: absolute;
-  top: -10px;
-  left: 0px;
-  z-index: 1500;
+  top: 30px;
+  left: 90%;
+  z-index: 10;
+  opacity: 0.1;
+  -moz-opacity: 0.1;
+  filter: alpha(opacity=10);
 }
 #logo img {
   width: 345px;
@@ -4198,6 +4208,7 @@ h1 {
 }
 .container {
   position: relative;
+  padding: 40px 0px 10px 0;
 }
 #content a {
   display: block;
@@ -4219,9 +4230,13 @@ h1 {
   -o-transition: opacity 3s;
   transition: opacity 3s;
 }
-#slideshow .item.white img {
-  height: 300px;
+#slideshow .item img {
+  position: absolute;
   width: 100%;
+  bottom: -100%;
+}
+#slideshow .item img.white {
+  bottom: 0px;
 }
 #slideshow .carousel .active.left,
 #slideshow .carousel .active.right {

@@ -22,6 +22,20 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
-$('.carousel').carousel({interval: 3000});
+	$('#logo').animate({
+			left: 0,
+			opacity: 1,
+			'-moz-opacity': 1,
+			filter: 'alpha(opacity=100)'
+		}, 3000);
+	$('.carousel').carousel({
+		interval: 7000
+	}).on('slid', function() {
+		$(this).find('.active.photo img').animate({
+			bottom: 0
+		}, 2000, function() {
+			$('.carousel .photo img').not('.carousel .active img').attr('style', '');
+		});
+	});
 });
 </script>

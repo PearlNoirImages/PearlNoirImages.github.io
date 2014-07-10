@@ -94,10 +94,19 @@
 
 body {
 /*	background-image: url("/public/img/fishnet.png");	*/
-	padding: 20% 0px;
-//	background-color: #666;
+	background-color: #666;
+	padding: 0px;
 }
 
+#wrapper {
+	position: relative;
+	margin: 15% 0px;
+	background-color: #EEE;
+
+	box-shadow: 0px 5px 15px #333;
+
+
+}
 h1 {
 	font-family: "Great Vibes", cursive;
 	font-size: 48px;
@@ -105,9 +114,12 @@ h1 {
 
 #logo {
 	position: absolute;
-	top: -10px;
-	left: 0px;
-	z-index: 1500;
+	top: 30px;
+	left: 90%;
+	z-index: 10;
+	opacity: 0.1;
+	-moz-opacity: 0.1;
+	filter: alpha(opacity=10);
 	img {
 		width: 345px;
 	}
@@ -137,8 +149,8 @@ h1 {
 }
 
 .container {
-//	background-color: #EEE;
 	position: relative;
+	padding: 40px 0px 10px 0;
 }
 #content {
 	a {
@@ -162,9 +174,13 @@ h1 {
 		-ms-transition: opacity 3s;
 		-o-transition: opacity 3s;
 		transition: opacity 3s;
-		&.white img {
-			height: 300px;
+		img {
+			position: absolute;
 			width: 100%;
+			bottom: -100%;
+			&.white {
+				bottom: 0px;
+			}
 		}
 	}
 	.carousel .active.left, .carousel .active.right {
