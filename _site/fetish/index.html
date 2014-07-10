@@ -145,16 +145,22 @@
 <script type="text/javascript">
 $(document).ready(function() {
 	$('#logo').animate({
-			left: 0,
-			opacity: 1,
-			'-moz-opacity': 1,
-			filter: 'alpha(opacity=100)'
-		}, 3000);
+		left: 0,
+		opacity: 1,
+		'-moz-opacity': 1,
+		filter: 'alpha(opacity=100)'
+	}, 3000);
+	
 	$('.carousel').carousel({
-		interval: 7000
+		interval: 7000,
+		pause: "false"
 	}).on('slid', function() {
+		var slideHeight = $(this).height();
+		var imageHeight = $(this).find('.active.photo img').height();
+		var animTop = slideHeight - imageHeight
+		
 		$(this).find('.active.photo img').animate({
-			bottom: 0
+			top: ((animTop < 0) ? animTop : 0)
 		}, 2000, function() {
 			$('.carousel .photo img').not('.carousel .active img').attr('style', '');
 		});

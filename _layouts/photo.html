@@ -9,12 +9,16 @@
 
 
 <div id="wrapper">
-
-
 	<div class="container">
-		<div id="logo"><img alt="Pearl Noir Logo" src="public/img/pearlnoir-logo.png"></div>
+		<div id="logo" class="hidden-phone"><img alt="Pearl Noir Logo" src="public/img/pearlnoir-logo.png"></div>
+		<div class="row-fluid visible-phone">
+			<div id="mobileLogo"><img alt="Pearl Noir Logo" src="public/img/pearlnoir-logo.png"></div>
+		</div>
 		<div class="row-fluid">
-			<div id="slideshow" class="span10 offset2">
+			<div id="slideshow" class="span10 offset2 hidden-phone">
+				{% include slideshow.html %}
+			</div>
+			<div id="mobileSlideshow" class="span10 offset2 visible-phone">
 				{% include slideshow.html %}
 			</div>
 		</div>
@@ -39,11 +43,11 @@
 		</div>
 
 
-	</div> <!-- /container -->
-
+	</div>
 </div>
 
 	{% include js.html %}
+
 
 </body>
 </html>

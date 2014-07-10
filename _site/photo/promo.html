@@ -29,39 +29,38 @@
 
 
 <div id="wrapper">
-
-
 	<div class="container">
-		<div id="logo"><img alt="Pearl Noir Logo" src="public/img/pearlnoir-logo.png"></div>
-		<div class="row-fluid">
-			<div id="slideshow" class="span10 offset2">
-					<div id="photoCarousel" class="carousel slide">
-<!-- 
-		<ol class="carousel-indicators">
-			<li data-target="#slideshow" data-slide-to="0" class="active"></li>
-			<li data-target="#slideshow" data-slide-to="1"></li>
-			<li data-target="#slideshow" data-slide-to="2"></li>
-		</ol>
- -->
-
-
-	<!-- Carousel items -->
-		<div class="carousel-inner">
-			<div class="item white active"><img src="../public/img/dookie.jpg" alt="" title="" /></div>
-			<div class="item photo"><img src="../public/img/slide/1.jpg" alt="" title="" /></div>
-			<div class="item white"><img src="../public/img/dookie.jpg" alt="" title="" /></div>
-			<div class="item photo"><img src="../public/img/slide/2.jpg" alt="" title="" /></div>
-			<div class="item white"><img src="../public/img/dookie.jpg" alt="" title="" /></div>
-			<div class="item photo"><img src="../public/img/slide/3.jpg" alt="" title="" /></div>
+		<div id="logo" class="hidden-phone"><img alt="Pearl Noir Logo" src="public/img/pearlnoir-logo.png"></div>
+		<div class="row-fluid visible-phone">
+			<div id="mobileLogo"><img alt="Pearl Noir Logo" src="public/img/pearlnoir-logo.png"></div>
 		</div>
-
-
-	<!-- Carousel nav -->
-<!-- 
-		<a class="carousel-control left" href="#slideshow" data-slide="prev">&lsaquo;</a>
-		<a class="carousel-control right" href="#slideshow" data-slide="next">&rsaquo;</a>
- -->
+		<div class="row-fluid">
+			<div id="slideshow" class="span10 offset2 hidden-phone">
+				<div class="carousel slide">
+	<div class="mask hidden-phone"></div>
+	<div class="carousel-inner">
+		<div class="item white active"><img src="../public/img/dookie.jpg" alt="" title="" /></div>
+		<div class="item photo"><img src="../public/img/slide/1.jpg" alt="" title="" /></div>
+		<div class="item white"><img src="../public/img/dookie.jpg" alt="" title="" /></div>
+		<div class="item photo"><img src="../public/img/slide/2.jpg" alt="" title="" /></div>
+		<div class="item white"><img src="../public/img/dookie.jpg" alt="" title="" /></div>
+		<div class="item photo"><img src="../public/img/slide/3.jpg" alt="" title="" /></div>
 	</div>
+</div>
+
+			</div>
+			<div id="mobileSlideshow" class="span10 offset2 visible-phone">
+				<div class="carousel slide">
+	<div class="mask hidden-phone"></div>
+	<div class="carousel-inner">
+		<div class="item white active"><img src="../public/img/dookie.jpg" alt="" title="" /></div>
+		<div class="item photo"><img src="../public/img/slide/1.jpg" alt="" title="" /></div>
+		<div class="item white"><img src="../public/img/dookie.jpg" alt="" title="" /></div>
+		<div class="item photo"><img src="../public/img/slide/2.jpg" alt="" title="" /></div>
+		<div class="item white"><img src="../public/img/dookie.jpg" alt="" title="" /></div>
+		<div class="item photo"><img src="../public/img/slide/3.jpg" alt="" title="" /></div>
+	</div>
+</div>
 
 			</div>
 		</div>
@@ -90,8 +89,7 @@
 		</div>
 
 
-	</div> <!-- /container -->
-
+	</div>
 </div>
 
 	<!-- Placed at the end of the document so the pages load faster -->
@@ -119,22 +117,29 @@
 <script type="text/javascript">
 $(document).ready(function() {
 	$('#logo').animate({
-			left: 0,
-			opacity: 1,
-			'-moz-opacity': 1,
-			filter: 'alpha(opacity=100)'
-		}, 3000);
+		left: 0,
+		opacity: 1,
+		'-moz-opacity': 1,
+		filter: 'alpha(opacity=100)'
+	}, 3000);
+	
 	$('.carousel').carousel({
-		interval: 7000
+		interval: 7000,
+		pause: "false"
 	}).on('slid', function() {
+		var slideHeight = $(this).height();
+		var imageHeight = $(this).find('.active.photo img').height();
+		var animTop = slideHeight - imageHeight
+		
 		$(this).find('.active.photo img').animate({
-			bottom: 0
+			top: ((animTop < 0) ? animTop : 0)
 		}, 2000, function() {
 			$('.carousel .photo img').not('.carousel .active img').attr('style', '');
 		});
 	});
 });
 </script>
+
 
 
 </body>
