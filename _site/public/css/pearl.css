@@ -4187,6 +4187,7 @@ h1 {
   width: 345px;
 }
 #mobileLogo {
+  margin-top: -20px;
   text-align: center;
 }
 #mobileLogo img {
