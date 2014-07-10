@@ -4289,23 +4289,46 @@ h1 {
   margin-top: 20px;
   box-shadow: 0px 5px 15px #333;
 }
+#mobileFoot,
 #foot {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 14px;
-  letter-spacing: 0.45em;
+  letter-spacing: 0.6em;
   text-align: center;
   font-variant: small-caps;
 }
+#mobileFoot div:first-child,
 #foot div:first-child {
   text-align: left;
 }
+#mobileFoot div:last-child,
 #foot div:last-child {
   text-align: right;
 }
+#mobileFoot a:focus,
 #foot a:focus,
+#mobileFoot a:active,
 #foot a:active,
+#mobileFoot a:hover,
 #foot a:hover {
   text-decoration: none;
   font-weight: 700;
+}
+#mobileFoot {
+  letter-spacing: 0.4em;
+}
+#mobileFoot div:first-child {
+  text-align: center;
+}
+#mobileFoot div:last-child span {
+  display: block;
+}
+#mobileFoot div:last-child span:first-child {
+  float: left;
+  padding-left: 8px;
+}
+#mobileFoot div:last-child span:last-child {
+  float: right;
+  padding-right: 8px;
 }
