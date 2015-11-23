@@ -1,5 +1,5 @@
 name:       Pearl Noir Images
-highlighter:   null
+markdown: redcarpet
 
 exclude:    ['*.less']
 baseurl:    /
