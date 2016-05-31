@@ -1,5 +1,5 @@
 ---
-layout: photo
+layout: blank
 title: Pearl Noir Images
 ---
 
